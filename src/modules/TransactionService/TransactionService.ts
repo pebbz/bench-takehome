@@ -22,7 +22,6 @@ class TransactionService implements ITransactionService {
 		let nextUrl:string|null = url;
 		while (nextUrl != null) {
 			let results: TransactionRestResponse = await this.clientTransaction.get(nextUrl);
-
 			if (results.transactions.length > 0) {
 				await this.repoTransaction.write(results.transactions);
 			}

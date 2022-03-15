@@ -42,7 +42,7 @@ describe("Transaction Rest Client Tests", () => {
 
 			// assert
 			assert.deepEqual(actual.transactions.length, 4)
-			assert.deepEqual(actual.nextPage, 'test2/2.json')
+			assert.deepEqual(actual.nextPage, 'api/test2/2.json')
 		}
 		, TIMEOUT);
 

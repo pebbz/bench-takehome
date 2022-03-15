@@ -15,7 +15,7 @@ describe("Transaction Service Tests", () => {
 			const serviceTransaction = new TransactionService(mockClient, repoTransaction)
 
 			// act
-			await serviceTransaction.process('test1/1.json');
+			await serviceTransaction.process('api/test1/1.json');
 
 			// assert
 			assert.deepEqual(repoTransaction.transactions.length, 3)
@@ -30,7 +30,7 @@ describe("Transaction Service Tests", () => {
 			const serviceTransaction = new TransactionService(mockClient, repoTransaction)
 
 			// act
-			await serviceTransaction.process('test2/1.json');
+			await serviceTransaction.process('api/test2/1.json');
 
 			// assert
 			assert.deepEqual(repoTransaction.transactions.length, 6)

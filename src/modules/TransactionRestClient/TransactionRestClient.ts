@@ -65,7 +65,7 @@ class TransactionRestClient implements ITransactionRestClient {
 
 		// Calculate if there is another page after this one
 		const nextPageUrl = this.calculateNextPage(url, response.data);
-		return new TransactionRestResponse(response, nextPageUrl);
+		return new TransactionRestResponse(response.data, nextPageUrl);
 	}
 }
 
